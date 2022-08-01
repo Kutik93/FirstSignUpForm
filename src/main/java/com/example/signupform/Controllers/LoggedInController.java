@@ -1,5 +1,6 @@
 package com.example.signupform.Controllers;
 
+import com.example.signupform.Utils.DB;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,7 +27,7 @@ public class LoggedInController implements Initializable {
         button_logout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-
+                DB.changeScene(actionEvent, "hello-view", "Log in!", null, null);
             }
         });
     }
