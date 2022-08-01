@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.signupform.Controllers.LoggedInController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.signupform.Controllers.LoggedInController">
+   <children>
+      <Label layoutX="243.0" layoutY="43.0" text="Welcome!">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="182.0" layoutY="140.0" text="This's your first app to login!">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_logout" layoutX="260.0" layoutY="246.0" mnemonicParsing="false" style="-fx-background-color: #11E2FF;" text="Logout">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

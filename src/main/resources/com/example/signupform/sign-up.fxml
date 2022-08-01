@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.signupform.Controllers.SignUpController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="534.0">
+         <children>
+            <AnchorPane prefHeight="162.0" prefWidth="600.0" style="-fx-background-color: #11E2FF;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../java/com/example/signupform/Images/simple-logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="479.0" layoutY="29.0" text="Sample ">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font></Label>
+                  <Label layoutX="426.0" layoutY="113.0" text="sample@support.com">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="444.0" layoutY="71.0" text="(+48) 987 654 321">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <Label layoutX="152.0" layoutY="190.0" text="Username">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="152.0" layoutY="235.0" text="Password">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font></Label>
+            <TextField fx:id="tf_username" layoutX="310.0" layoutY="188.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></TextField>
+            <TextField fx:id="tf_password" layoutX="310.0" layoutY="233.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></TextField>
+            <Label layoutX="96.0" layoutY="280.0" text="Account recovery using">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="rb_sms" layoutX="341.0" layoutY="280.0" mnemonicParsing="false" text="SMS" />
+            <RadioButton fx:id="rb_email" layoutX="421.0" layoutY="280.0" mnemonicParsing="false" text="email" />
+            <Button fx:id="button_signup" layoutX="313.0" layoutY="326.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="175.0" style="-fx-background-color: #11E2FF;" text=" Signup">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <Label layoutX="14.0" layoutY="366.0" text="Already a member?">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="button_log_in" layoutX="165.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!" textFill="#0565ff" underline="true">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
