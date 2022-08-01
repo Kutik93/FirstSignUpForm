@@ -67,9 +67,89 @@ public class DB {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psCheckUserExists != null) {
+                try {
+                    psCheckUserExists.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (psInsert != null) {
+                try {
+                    psInsert.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
     }
 
+    public static void logInUser(ActionEvent event, String username, String password) {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/signupform", "root", "Cda12345!");
+            preparedStatement = connection.prepareStatement("SELECT password, firstApp FROM users WHERE username = ?");
+            preparedStatement.setString(1, username);
+            resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.isBeforeFirst()) {
+                System.out.println("User not found in the database!");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Provided credentials are incorrect!");
+                alert.show();
+            } else {
+                while (resultSet.next()) {
+                    String retrievedPassword = resultSet.getString("password");
+                    String retrievedChannel = resultSet.getString("firstApp");
+                    if (retrievedPassword.equals(password)) {
+                        changeScene(event, "logged-in.fxml", "Welcome", username, retrievedChannel);
+                    } else {
+                        System.out.println("Passwprd did not match!");
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("The provieded credential are incorrect!");
+                        alert.show();
+                    }
+                }
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            if(resultSet != null){
+                try {
+                    resultSet.close();
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+            if(connection != null){
+                try {
+                    connection.close();
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+
+        }
+
+    }
 
 }
