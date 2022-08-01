@@ -1,6 +1,6 @@
-package com.example.signupform.Controllers;
+package sample.Controllers;
 
-import com.example.signupform.Utils.DB;
+import sample.Utils.DB;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,7 +26,7 @@ public class Controller implements Initializable {
     private Button button_sign_up;
 
     @Override
-    public void initialize(URL location, ResourceBundle resource) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
         button_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override

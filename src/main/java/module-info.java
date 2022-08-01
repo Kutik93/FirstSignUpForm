@@ -5,6 +5,6 @@ module com.example.signupform {
 
 
 
-    opens com.example.signupform to javafx.fxml;
-    exports com.example.signupform;
+    opens sample to javafx.fxml;
+    exports sample;
 }

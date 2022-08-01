@@ -1,6 +1,6 @@
-package com.example.signupform.Controllers;
+package sample.Controllers;
 
-import com.example.signupform.Utils.DB;
+import sample.Utils.DB;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -27,14 +27,14 @@ public class LoggedInController implements Initializable {
         button_logout.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                DB.changeScene(actionEvent, "hello-view", "Log in!", null, null);
+                DB.changeScene(actionEvent, "hello-view.fxml", "Log in!", null, null);
             }
         });
     }
 
     public void setUserInformation(String username, String firstApp){
         label_welcome.setText("Welcome " + username + "!");
-        label_first_app.setText("This's your first app to login! You can recover your account password using: " + firstApp);
+        label_first_app.setText("This is your first app to login! You can recover your account password using: " + firstApp);
     }
 
 

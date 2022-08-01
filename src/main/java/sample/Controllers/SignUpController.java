@@ -1,6 +1,6 @@
-package com.example.signupform.Controllers;
+package sample.Controllers;
 
-import com.example.signupform.Utils.DB;
+import sample.Utils.DB;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -49,7 +49,7 @@ public class SignUpController implements Initializable {
                 } else {
                     System.out.println("Please fill in all information");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setContentText("Plrease fill in all information to sign up!");
+                    alert.setContentText("Please fill in all information to sign up!");
                     alert.show();
                 }
             }

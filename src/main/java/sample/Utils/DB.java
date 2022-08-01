@@ -1,6 +1,7 @@
-package com.example.signupform.Utils;
+package sample.Utils;
 
-import com.example.signupform.Controllers.LoggedInController;
+import javafx.scene.layout.AnchorPane;
+import sample.Controllers.LoggedInController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -20,6 +21,7 @@ public class DB {
         if (username != null && firstApp != null) {
             try {
                 FXMLLoader loader = new FXMLLoader(DB.class.getResource(fxmlFile));
+//                loader.setRoot(new AnchorPane());                             // This probably resolves problem with start program
                 root = loader.load();
                 LoggedInController loggedInController = loader.getController();
                 loggedInController.setUserInformation(username, firstApp);
@@ -50,7 +52,7 @@ public class DB {
             psCheckUserExists.setString(1, username);
             resultSet = psCheckUserExists.executeQuery();
 
-            if (resultSet.isBeforeFirst()) {
+            if (!resultSet.isBeforeFirst()) {
                 System.out.println("User already exist");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("You cannot use this username.");
@@ -110,7 +112,7 @@ public class DB {
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();
 
-            if (resultSet.isBeforeFirst()) {
+            if (!resultSet.isBeforeFirst()) {
                 System.out.println("User not found in the database!");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Provided credentials are incorrect!");
@@ -132,18 +134,18 @@ public class DB {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            if(resultSet != null){
+        } finally {
+            if (resultSet != null) {
                 try {
                     resultSet.close();
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
-            if(connection != null){
+            if (connection != null) {
                 try {
                     connection.close();
-                }catch (SQLException e){
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
