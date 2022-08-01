@@ -13,7 +13,7 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../java/com/example/signupform/Images/simple-logo.png" />
+                        <Image url="@simple-logo.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="426.0" layoutY="113.0" text="sample@support.com">
@@ -34,7 +34,7 @@
             </AnchorPane>
             <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="14.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../java/com/example/signupform/Images/lock-closed.png" />
+                  <Image url="@lock-closed.png" />
                </image></ImageView>
             <Label layoutX="151.0" layoutY="224.0" text="Username">
                <font>

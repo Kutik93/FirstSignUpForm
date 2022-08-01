@@ -13,7 +13,7 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../java/com/example/signupform/Images/simple-logo.png" />
+                        <Image url="@simple-logo.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="479.0" layoutY="29.0" text="Sample ">
@@ -63,7 +63,7 @@
                   <Font name="Arial Bold" size="17.0" />
                </font>
             </Label>
-            <Button fx:id="button_log_in" layoutX="165.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!" textFill="#0565ff" underline="true">
+            <Button layoutX="165.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Log In!" textFill="#0565ff" underline="true">
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font>

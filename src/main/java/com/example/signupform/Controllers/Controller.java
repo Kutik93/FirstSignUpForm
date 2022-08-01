@@ -26,7 +26,7 @@ public class Controller implements Initializable {
     private Button button_sign_up;
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL location, ResourceBundle resource) {
 
         button_login.setOnAction(new EventHandler<ActionEvent>() {
             @Override
