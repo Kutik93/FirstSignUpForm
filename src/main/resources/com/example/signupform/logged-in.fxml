@@ -11,7 +11,7 @@
             <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="182.0" layoutY="140.0" text="This's your first app to login!">
+      <Label fx:id="label_first_app" layoutX="182.0" layoutY="140.0" text="This's your first app to login!">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
